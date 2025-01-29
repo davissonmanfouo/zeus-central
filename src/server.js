@@ -53,6 +53,7 @@ serialport.on("open", function () {
 
 // All frames parsed by the XBee will be emitted here
 xbeeAPI.parser.on("data", function (frame) {
+  //
 
   //on new device is joined, register it
   if (C.FRAME_TYPE.JOIN_NOTIFICATION_STATUS === frame.type) {
@@ -76,8 +77,9 @@ xbeeAPI.parser.on("data", function (frame) {
     console.log("ZIGBEE_IO_DATA_SAMPLE_RX")
     console.log(frame)
     console.log("Value of ADO can be retrieved with frame.analogSamples.AD0")
-    console.log(frame.analogSamples.AD0)
-
+    console.log(frame.analogSamples.AD0);
+    console.log(frame.analogSamples.AD1);
+    console.log(frame.analogSamples.AD2);
   } else if (C.FRAME_TYPE.REMOTE_COMMAND_RESPONSE === frame.type) {
     console.log("REMOTE_COMMAND_RESPONSE")
   } else {
