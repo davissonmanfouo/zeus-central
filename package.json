@@ -6,9 +6,9 @@
     "start": "cross-env NODE_ENV=production node src/server"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "firebase-admin": "^9.5.0",
-    "serialport": "^9.2.4",
+    "serialport": "^9.2.8",
     "socket.io": "^2.4.0",
     "xbee": "^0.0.4",
     "xbee-api": "^0.6.0"
